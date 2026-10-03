@@ -44,8 +44,8 @@ jobs:
           dotnet-version: '10.0.x'
 
       - name: Build da API
-        working-directory: api/GerenciadorDeTarefasAPI
-        run: dotnet build --configuration Release
+        working-directory: api/GerenciadorDeTarefas
+        run: dotnet build 
 
   frontend:
     runs-on: ubuntu-latest
