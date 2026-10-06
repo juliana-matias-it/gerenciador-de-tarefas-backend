@@ -31,7 +31,7 @@ jobs:
             echo "Fluxo válido: develop -> main"
           fi
 
-  api:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -43,8 +43,7 @@ jobs:
         with:
           dotnet-version: '10.0.x'
 
-      - name: Build da API
-        working-directory: GerenciadorDeTarefas
+      - name: Build da aplicação
         run: dotnet build 
 
   
