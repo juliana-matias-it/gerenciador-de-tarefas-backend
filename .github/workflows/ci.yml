@@ -44,27 +44,7 @@ jobs:
           dotnet-version: '10.0.x'
 
       - name: Build da API
-        working-directory: api/GerenciadorDeTarefas
+        working-directory: GerenciadorDeTarefas
         run: dotnet build 
 
-  frontend:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout do código
-        uses: actions/checkout@v4
-
-      - name: Configurar Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          cache: 'npm'
-          cache-dependency-path: frontend/gerenciador-de-tarefas/package-lock.json
-
-      - name: Instalar dependências
-        working-directory: frontend/gerenciador-de-tarefas
-        run: npm ci
-
-      - name: Build do Angular
-        working-directory: frontend/gerenciador-de-tarefas
-        run: npm run build
+  
