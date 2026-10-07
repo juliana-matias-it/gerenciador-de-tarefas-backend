@@ -1,4 +1,6 @@
+using GerenciadorDeTarefas.Enums;
 using System.ComponentModel.DataAnnotations;
+
 
 namespace GerenciadorDeTarefas.Models
 {
