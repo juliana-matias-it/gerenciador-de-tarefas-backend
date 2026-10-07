@@ -1,5 +1,8 @@
-public enum StatusTarefa
+namespace GerenciadorDeTarefas.Enums
 {
-    Pendente,
-    Concluida
+    public enum StatusTarefa
+    {
+        Pendente,
+        Concluida
+    }
 }
