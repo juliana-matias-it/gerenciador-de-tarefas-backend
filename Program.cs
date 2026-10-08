@@ -1,5 +1,9 @@
 using GerenciadorDeTarefas.Data;
 using Microsoft.EntityFrameworkCore;
+using GerenciadorDeTarefas.Repositories;
+using GerenciadorDeTarefas.Repositories.Interfaces;
+using GerenciadorDeTarefas.Services;
+using GerenciadorDeTarefas.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +12,12 @@ builder.Services.AddDbContext<AppDbContext>(
         builder.Configuration.GetConnectionString("DefaultConnection")
     )
 );
+
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddScoped<ITarefaRepository, TarefaRepository>();
+
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+builder.Services.AddScoped<ITarefaService, TarefaService>();
 
 // Add services to the container.
 
